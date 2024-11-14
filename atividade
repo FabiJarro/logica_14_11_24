@@ -1,0 +1,95 @@
+class pessoa:
+    def __init__(self, nome, idade):
+        self.nome=nome
+        self.idade=idade
+    def exibir_informacoes(self):
+        print(f"Nome: {self.nome}, idade: {self.idade}")
+       
+#teste        
+p1=pessoa("joão",30)
+p2=pessoa("Maria", 25)
+p1.exibir_informacoes()
+p2.exibir_informacoes()
+
+
+
+
+
+
+
+
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca=marca
+        self.modelo=modelo
+        self.ano=ano
+    def exibir_detalhes(self):
+        print(f"Marca: {self.marca}, modelo: {self.modelo}, ano:{self.ano}")
+       
+#teste        
+c1=Carro("Toyota", " picape Hilux", 2008)
+c2=Carro("BMW", "BMW X7 M60i", 2009 )
+c3=Carro("Jeep", "Grand Cherokee", 2015)
+c1.exibir_detalhes()
+c2.exibir_detalhes()
+c3.exibir_detalhes()
+
+
+
+
+
+
+
+
+
+class conta_bancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular=titular
+        self.saldo=saldo
+    def depositar(self, valor):
+        self.saldo+=valor
+    def sacar (self, valor):
+        if valor<= self.saldo:
+            self.saldo-=valor
+        else:
+            print("saldo insuficiente")
+    def exibir_saldo(self):
+        print(f"Saldo: {self.saldo}")
+       
+#teste        
+conta=conta_bancaria("joão",100)
+conta.depositar(50)
+conta.sacar(30)
+conta.exibir_saldo()
+conta.sacar(150)
+
+
+
+
+
+
+
+
+class Animal:
+    def __init__(self, nome):
+        self.nome=nome
+        
+    def som(self):
+        return "som de animal"
+        
+class cachorro(Animal):
+    def som(self):
+        return "latido"
+        
+class gato(Animal):
+    def som(self):
+        return "Miado"
+        
+cachorro= cachorro("Gigante")
+gato= gato("Garfield")
+
+#teste        
+print(cachorro.nome)
+print(cachorro.som())
+print(gato.nome)
+print(gato.som())
